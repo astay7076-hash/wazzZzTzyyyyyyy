@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portofolio SMKN 20 JAKARTA</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="scene">
+    <canvas id="petalCanvas"></canvas>
+    <div class="vignette"></div>
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo-stamp">RPL</div>
+        <div class="brand-text">PORTOFOLIO <span class="sub">SMK X - RPL</span></div>
+      </div>
+      <nav class="menu">
+        <button class="tab active" data-target="home">Home</button>
+        <button class="tab" data-target="data">Data Pribadi</button>
+        <button class="tab" data-target="projek">Tugas & Projek</button>
+        <button class="tab" data-target="lain">Lainnya</button>
+        <button id="btnLogin" class="accent-btn">Login</button>
+        <button id="btnLogout" class="accent-btn hidden">Logout</button>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section id="home" class="panel active">
+        <div class="hero">
+          <h1 class="title">Selamat Datang</h1>
+          <p class="lead">Portofolio FawwaazZzTzy</p>
+          <div class="hero-cards">
+            <div class="info-card">
+              <h3>Profil Singkat</h3>
+              <p id="miniProfile">Silakan login untuk melihat data lengkap.</p>
+            </div>
+            <div class="info-card neon">
+              <h3>Status</h3>
+              <p id="status">Pengunjung</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="data" class="panel">
+        <h2>Data Pribadi</h2>
+        <div id="lockedArea" class="locked">
+          <div class="lock-msg">Konten terlindungi — login untuk membuka.</div>
+        </div>
+        <div id="dataContent" class="protected hidden">
+          <div class="card">
+            <h3>Identitas</h3>
+            <ul>
+              <li>Nama: <span id="nama">-</span></li>
+              <li>NIS: <span id="nis">-</span></li>
+              <li>Jurusan: Rekayasa Perangkat Lunak</li>
+              <li>Email: <span id="email">-</span></li>
+            </ul>
+            <button id="editBtn" class="small-btn">Edit</button>
+          </div>
+          <div id="editForm" class="card hidden">
+            <h3>Edit Data</h3>
+            <label>Nama <input id="inpNama" /></label>
+            <label>NIS <input id="inpNis" /></label>
+            <label>Email <input id="inpEmail" /></label>
+            <div class="row">
+              <button id="saveData" class="small-btn accent">Simpan</button>
+              <button id="cancelEdit" class="small-btn">Batal</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projek" class="panel">
+        <h2>Tugas & Projek</h2>
+        <div id="projects" class="projects">
+          <!-- proyek akan diisi oleh JS -->
+        </div>
+        <button id="addProj" class="small-btn">Tambah Projek</button>
+      </section>
+
+      <section id="lain" class="panel">
+        <h2>Lainnya</h2>
+        <div class="card">
+          <h3>Skill</h3>
+          <ul>
+            <li>HTML / CSS / JavaScript</li>
+            <li>Pemrograman dasar </li>
+            <li>Git & GitHub</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Kontak</h3>
+          <p>IG: @ererqionikw4z • GitHub: github.com/username</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Login Modal -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-card">
+        <div class="modal-header">
+          <div class="slash-anim"></div>
+          <h3>Login</h3>
+        </div>
+        <form id="loginForm">
+          <label>Username <input id="username" required autocomplete="username"></label>
+          <label>Password <input id="password" type="password" required autocomplete="current-password"></label>
+          <div class="actions">
+            <button type="submit" class="accent">Masuk</button>
+            <button type="button" id="cancel" class="ghost">Batal</button>
+          </div>
+          <p class="hint">username: <code>wazz465</code> | password: <code>kireikotomine911</code></p>
+        </form>
+      </div>
+    </div>
+
+    <footer class="foot">
+      <div class="foot-left">Portofolio — SMK 10 RPL</div>
+      <div class="foot-right">Animasi: CSS + Canvas</div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
